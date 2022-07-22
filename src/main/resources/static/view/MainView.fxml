@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #E1E2E1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.MainViewController">
+    <top>
+        <VBox prefHeight="37.0" prefWidth="1102.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox maxHeight="54.0" minHeight="39.0" prefHeight="39.0" prefWidth="1102.0" spacing="10.0" style="-fx-background-color: #546e7a;">
+                    <children>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" onMouseClicked="#onProducts" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/icons8-product-60.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="7.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="33.0" fitWidth="27.0" onMouseClicked="#onSellProducts" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/icons8-budget-60.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="7.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#819ca9" height="33.0" stroke="#ffffff00" strokeType="INSIDE" width="3.0">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </Rectangle>
+                        <ImageView fitHeight="38.0" fitWidth="27.0" onMouseClicked="#onReportings" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/icons8-product-report60.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="7.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#819ca9" height="33.0" stroke="#ffffff00" strokeType="INSIDE" width="3.0">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </Rectangle>
+                        <ImageView fitHeight="38.0" fitWidth="27.0" onMouseClicked="#onExportings" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/import-csv-96.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="7.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="27.0" onMouseClicked="#onBackuping" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/database-restore-64.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="7.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </AnchorPane>
+                        <ProgressIndicator fx:id="mainProgress" prefHeight="29.0" prefWidth="28.0" style="-fx-accent: #ffab91;" />
+                        <AnchorPane maxWidth="13.0" minWidth="5.0" prefHeight="46.0" prefWidth="5.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+   <center>
+      <AnchorPane prefHeight="575.0" prefWidth="1102.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

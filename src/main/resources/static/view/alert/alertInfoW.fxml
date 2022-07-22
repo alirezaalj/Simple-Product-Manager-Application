@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="230.0" style="-fx-border-color: #bf426d" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.util.alert.alertController.InfoAlertController">
+   <top>
+      <AnchorPane prefHeight="63.0" prefWidth="385.0" style="-fx-background-color: #FF8A65; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTitle" alignment="TOP_CENTER" layoutX="63.0" layoutY="22.0" prefHeight="19.0" prefWidth="264.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-general-warning-sign-100.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <JFXButton fx:id="btnOk" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #FF8A65; -fx-background-radius: 50;" text="Ok" textFill="#f2f2f2" BorderPane.alignment="CENTER_RIGHT">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" right="10.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="110.0" prefWidth="365.0" style="-fx-background-color: #FFCCBC; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextArea fx:id="txtMessage" editable="false" focusColor="#ffccbc" layoutX="20.0" layoutY="16.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="350.0" style="-fx-background-radius: 30;" unFocusColor="#ffccbc" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

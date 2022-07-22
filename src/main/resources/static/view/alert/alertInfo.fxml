@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="230.0" prefWidth="400.0" style="-fx-border-color: #5dac5a" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.util.alert.alertController.InfoAlertController">
+   <top>
+      <AnchorPane prefHeight="63.0" prefWidth="385.0" style="-fx-background-color: #5a9216; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTitle" alignment="TOP_CENTER" layoutX="63.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="264.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-info.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="110.0" prefWidth="365.0" style="-fx-background-color: #bdf479; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextArea fx:id="txtMessage" editable="false" focusColor="#bdf479" layoutX="20.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="350.0" style="-fx-background-radius: 30;" unFocusColor="#bdf479" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <JFXButton fx:id="btnOk" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #8ac149; -fx-background-radius: 50;" text="Ok" textFill="#f2f2f2" BorderPane.alignment="CENTER_RIGHT">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" right="10.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+   <effect>
+      <DropShadow height="47.69" radius="18.8975" width="29.9">
+         <color>
+            <Color red="0.02631578966975212" green="0.02631578966975212" blue="0.02631578966975212" />
+         </color>
+      </DropShadow>
+   </effect>
+</BorderPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="230.0" style="-fx-border-color: #5dac5a" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.util.alert.alertController.QuAlertController">
+   <top>
+      <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="385.0" style="-fx-background-color: #5a9216; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTitle" layoutX="82.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="246.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-question.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="110.0" prefWidth="365.0" style="-fx-background-color: #bdf479; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextArea fx:id="txtMessage" editable="false" focusColor="#bdf479" layoutX="25.0" layoutY="12.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="89.0" prefWidth="350.0" style="-fx-background-radius: 30;" unFocusColor="#bdf479" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <JFXButton fx:id="btnYes" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #8ac149; -fx-background-radius: 50;" text="Yes" textFill="#f2f2f2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnNo" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #ff5722; -fx-background-radius: 50;" text="No" textFill="#f2f2f2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

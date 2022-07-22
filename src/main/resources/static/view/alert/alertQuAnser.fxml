@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="254.0" style="-fx-border-color: #5dac5a" prefWidth="411.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.util.alert.alertController.QuAlertAnserController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="63.0" prefWidth="385.0" style="-fx-background-color: #5a9216; -fx-background-radius: 30;">
+         <children>
+            <Label fx:id="lblTitle" layoutX="43.0" layoutY="22.0" prefHeight="19.0" prefWidth="246.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="317.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-question.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnNo" layoutX="311.0" layoutY="205.0" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #ff5722; -fx-background-radius: 50;" text="No" textFill="#f2f2f2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="20.0" layoutY="88.0" prefHeight="110.0" prefWidth="365.0" style="-fx-background-color: #bdf479; -fx-background-radius: 30;">
+         <children>
+            <JFXTextArea fx:id="txtMessage" editable="false" focusColor="#bdf479" layoutX="14.0" layoutY="12.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="55.0" prefWidth="339.0" style="-fx-background-radius: 30;" unFocusColor="#bdf479" />
+            <JFXTextField fx:id="txtMyMessage" focusColor="#3c48b9" layoutX="29.0" layoutY="70.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="316.0" promptText="رسالة" unFocusColor="#c9596a" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnYes" layoutX="241.0" layoutY="205.0" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #8ac149; -fx-background-radius: 50;" text="Yes" textFill="#f2f2f2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

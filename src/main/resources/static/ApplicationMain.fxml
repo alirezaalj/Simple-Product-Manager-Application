@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #E1E2E1;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.ApplicationMainController">
+   <top>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="1102.0" spacing="5.0" style="-fx-background-color: #29434e;">
+         <children>
+            <ImageView fx:id="btnClose" fitHeight="24.0" fitWidth="26.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/close-64.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="1.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="20.0" onDragDetected="#onMaxMinimize" onMouseClicked="#onMaxMinimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-maximize-window-96.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="23.0" onMouseClicked="#onMinimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/subtract-96.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </ImageView>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="17.0" prefWidth="703.0" HBox.hgrow="ALWAYS" />
+            <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="267.0" text="2021-05-19 19:20:30" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="30.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <AnchorPane maxWidth="9.0" minWidth="9.0" prefHeight="26.0" prefWidth="9.0" />
+         </children></HBox>
+   </top>
+
+   <bottom>
+      <HBox prefHeight="40.0" prefWidth="700.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="643.0" prefWidth="1102.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
