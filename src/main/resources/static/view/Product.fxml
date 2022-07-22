@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="314.0" maxWidth="509.0" minHeight="314.0" minWidth="509.0" prefHeight="314.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.ProductController">
+   <top>
+      <HBox prefHeight="44.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Add New Product">
+               <HBox.margin>
+                  <Insets left="20.0" top="14.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="57.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="46.0" fitWidth="52.0" onMouseClicked="#onSave" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="15.0" top="6.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../img/ok-80.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="227.0" prefWidth="509.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="309.0" prefWidth="226.0">
+               <children>
+                  <Label fx:id="lblCode" text="Code: 15156">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Product Name:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" alignment="CENTER" prefHeight="26.0" prefWidth="226.0" promptText="Enter Product Name      ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="6.0" right="6.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Buy Price:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBuyPrice" alignment="CENTER" prefHeight="26.0" prefWidth="214.0" promptText="Enter Product Buy Price">
+                     <VBox.margin>
+                        <Insets left="6.0" right="6.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Sell Price:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSellPrice" alignment="CENTER" prefHeight="26.0" promptText="Enter Product Sell Price">
+                     <VBox.margin>
+                        <Insets left="6.0" right="6.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="13.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="213.0" prefWidth="261.0">
+               <children>
+                  <Label fx:id="lblDate" text="Add Date:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="26.0" prefWidth="256.0">
+                     <children>
+                        <Label text="Exist Count: ">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtExistCount" alignment="CENTER" prefHeight="26.0" prefWidth="66.0" text="0">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="32.0" prefWidth="256.0">
+                     <children>
+                        <Label text="Buy Count:">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtBuyCount" alignment="CENTER" prefHeight="25.0" prefWidth="62.0" text="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label text="Description:">
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtDescription" prefHeight="84.0" prefWidth="256.0" promptText="Enter Description">
+                     <VBox.margin>
+                        <Insets left="6.0" right="6.0" top="4.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextArea>
+               </children>
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
