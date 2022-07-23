@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="458.0" maxWidth="788.0" minHeight="314.0" minWidth="509.0" prefHeight="458.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.FactorController">
+   <top>
+      <HBox prefHeight="44.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblFormTitle" text="Add New Factor">
+               <HBox.margin>
+                  <Insets left="20.0" top="14.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="57.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="48.0" onMouseClicked="#onSave" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="15.0" top="8.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../img/ok-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="52.0" onMouseClicked="#onCancel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-cancel-100.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="16.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@style/tableView.css" BorderPane.alignment="CENTER">
+         <center>
+            <VBox prefHeight="357.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="subFactorTable" prefHeight="265.0" prefWidth="296.0">
+                    <columns>
+                      <TableColumn prefWidth="38.0">
+                         <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                         </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="82.0" text="Price">
+                         <cellValueFactory>
+                            <PropertyValueFactory property="price" />
+                         </cellValueFactory>
+                      </TableColumn>
+                        <TableColumn prefWidth="57.0" text="Quantity">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="count" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="109.0" text="Total Price">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="totalPrice" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="112.0" text="Product Code">
+                        </TableColumn>
+                        <TableColumn prefWidth="132.0" text="Product Name">
+                        </TableColumn>
+                        <TableColumn prefWidth="78.0" text="Profit">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="profit" />
+                           </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox prefHeight="41.0" prefWidth="643.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="33.0" onMouseClicked="#onAddToBasket" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-add-shopping-cart-100.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="33.0" onMouseClicked="#onRemoveFromBasket" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-remove-shopping-cart-100.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Total Price: ">
+                     <HBox.margin>
+                        <Insets left="5.0" top="11.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalPrice" prefHeight="16.0" prefWidth="156.0" text="0">
+                     <HBox.margin>
+                        <Insets left="5.0" top="11.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Total Profit: ">
+                     <HBox.margin>
+                        <Insets top="11.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalProfit" prefHeight="16.0" prefWidth="163.0" text="0">
+                     <HBox.margin>
+                        <Insets top="11.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="46.0" prefWidth="643.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Final Price:">
+                     <HBox.margin>
+                        <Insets left="10.0" top="13.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFinalPrice" onKeyPressed="#onFinalPriceKeyPressed" prefHeight="22.0" prefWidth="130.0" promptText="Final Price">
+                     <HBox.margin>
+                        <Insets left="2.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <HBox prefHeight="46.0" prefWidth="389.0" spacing="10.0">
+                     <children>
+                        <JFXRadioButton fx:id="rdb0Prs" text="0%" />
+                        <JFXRadioButton fx:id="rdb5Prs" text="5%" />
+                        <JFXRadioButton fx:id="rdb7Prs" text="7%" />
+                        <JFXRadioButton fx:id="rdb10Prs" text="10%" />
+                        <JFXRadioButton fx:id="rdb15Prs" text="15%" />
+                        <TextField fx:id="txtCustomPrs" alignment="CENTER" prefHeight="25.0" prefWidth="34.0">
+                           <HBox.margin>
+                              <Insets left="11.0" top="-5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </TextField>
+                        <Label text="\%" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="14.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>

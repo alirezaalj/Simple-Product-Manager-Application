@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="458.0" maxWidth="788.0" minHeight="314.0" minWidth="509.0" prefHeight="458.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.ProductSelectController">
+   <top>
+      <HBox prefHeight="44.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblFormTitle" text="Find Product">
+               <HBox.margin>
+                  <Insets left="20.0" top="14.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="57.0" prefWidth="509.0" style="-fx-background-color: #546e7a;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="43.0" onMouseClicked="#onSave" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="15.0" top="8.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../img/ok-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="52.0" onMouseClicked="#onCancel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-cancel-100.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="15.0" top="6.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@style/tableView.css" BorderPane.alignment="CENTER">
+         <center>
+            <VBox prefHeight="357.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="productTable" prefHeight="265.0" prefWidth="296.0">
+                     <columns>
+                     <TableColumn editable="false" prefWidth="83.0" text="Code">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn editable="false" prefWidth="139.0" text="Name">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn editable="false" prefWidth="146.0" text="Buy Price">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="buyPrice" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn editable="false" prefWidth="153.0" text="Sell Price">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="sellPrice" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn editable="false" prefWidth="74.0" text="Exist Count">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="existCount" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox prefHeight="41.0" prefWidth="643.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtFindByName" onKeyPressed="#onEnterFindByName" prefHeight="27.0" prefWidth="155.0" promptText="Find By Name" style="-fx-border-color: #945353;">
+                     <HBox.margin>
+                        <Insets left="10.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="38.0" fitWidth="27.0" onMouseClicked="#onFindByName" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-market-60.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#819ca9" height="33.0" stroke="#ffffff00" strokeType="INSIDE" width="3.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Rectangle>
+                  <TextField fx:id="txtFindByCode" onKeyPressed="#onEnterFindById" prefHeight="27.0" prefWidth="155.0" promptText="Find By Code" style="-fx-border-color: #945353;">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="38.0" fitWidth="27.0" onMouseClicked="#onFindByCode" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-review-60.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="46.0" prefWidth="643.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Quantity:">
+                     <HBox.margin>
+                        <Insets left="10.0" top="13.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onDecreaseQuantity" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-plus-100(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="7.0" top="11.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="txtQuantity" alignment="CENTER" editable="false" prefHeight="22.0" prefWidth="35.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="4.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onIncreaseQuantity" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-plus-100.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="11.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
