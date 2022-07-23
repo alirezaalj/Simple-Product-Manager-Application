@@ -158,7 +158,7 @@
                   </TableColumn>
                 </columns>
                <BorderPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
                </BorderPane.margin>
             </TableView>
          </center>

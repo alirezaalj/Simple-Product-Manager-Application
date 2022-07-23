@@ -23,10 +23,13 @@ public class Factor {
     private int id;
     @Column(nullable = false)
     private int totalPrice;
+    @Column(nullable = false)
+    private int finalPrice;
+    private int totalProfit;
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "factor",cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "factor",cascade = CascadeType.ALL)
     private List<SubFactor> subFactors;
 
     public void addSubFactor(SubFactor subFactor){

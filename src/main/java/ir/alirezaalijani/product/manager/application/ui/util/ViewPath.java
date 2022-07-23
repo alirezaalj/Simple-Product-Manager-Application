@@ -18,6 +18,9 @@ public class ViewPath {
     public static URL ViewMain=getUrl("view","MainView.fxml");
     public static URL ViewProducts = getUrl("view","Products.fxml");
     public static URL ViewProduct = getUrl("view","Product.fxml");
+    public static URL ViewProductSelect = getUrl("view","ProductSelect.fxml");
+    public static URL ViewFactors = getUrl("view","Factors.fxml");
+    public static URL ViewFactor = getUrl("view","Factor.fxml");
 
     // list item files
     public static URL ViewOrderItemCell= getUrl("view","OrderListItem.fxml");

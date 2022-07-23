@@ -29,14 +29,14 @@ public class MainViewController {
 
     @FXML
     public void onProducts(MouseEvent mouseEvent) {
-        // TODO: open products view to manage products
         FxmlContent content= viewManager.pushView(ViewPath.ViewProducts, ViewLoadType.PANE_PURE);
         rootPane.setCenter(content.getContentPane());
     }
 
     @FXML
     public void onSellProducts(MouseEvent mouseEvent) {
-        // TODO: open selling view to add factor and manage factors
+        FxmlContent content= viewManager.pushView(ViewPath.ViewFactors, ViewLoadType.PANE_PURE);
+        rootPane.setCenter(content.getContentPane());
     }
 
     @FXML

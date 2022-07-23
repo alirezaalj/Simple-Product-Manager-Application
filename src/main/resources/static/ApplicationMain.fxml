@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #E1E2E1;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.ApplicationMainController">
+<BorderPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #E1E2E1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.alirezaalijani.product.manager.application.ui.controller.ApplicationMainController">
    <top>
       <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="1102.0" spacing="5.0" style="-fx-background-color: #29434e;">
          <children>
@@ -21,17 +21,17 @@
                   <Insets top="1.0" />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="23.0" fitWidth="20.0" onDragDetected="#onMaxMinimize" onMouseClicked="#onMaxMinimize" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="19.0" fitWidth="23.0" onMouseClicked="#onMinimize" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/icons8-maximize-window-96.png" />
+                  <Image url="@img/subtract-96.png" />
                </image>
                <HBox.margin>
                   <Insets top="3.0" />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="19.0" fitWidth="23.0" onMouseClicked="#onMinimize" pickOnBounds="true" preserveRatio="true">
+            <ImageView disable="true" fitHeight="23.0" fitWidth="20.0" onDragDetected="#onMaxMinimize" onMouseClicked="#onMaxMinimize" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
-                  <Image url="@img/subtract-96.png" />
+                  <Image url="@img/icons8-maximize-window-96.png" />
                </image>
                <HBox.margin>
                   <Insets top="3.0" />

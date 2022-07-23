@@ -23,10 +23,23 @@ public class SubFactor {
     private int count;
     @Column(nullable = false)
     private int totalPrice;
-    @ManyToOne(fetch = FetchType.LAZY,optional = false)
+    private int profit;
+    @ManyToOne(fetch = FetchType.EAGER,optional = false)
     @JoinColumn(name="product_id", nullable=false)
     private Product product;
-    @ManyToOne(fetch = FetchType.LAZY,optional = false)
+    @ManyToOne(fetch = FetchType.EAGER,optional = false)
     @JoinColumn(name="factor_id", nullable=false)
     private Factor factor;
+
+    @Override
+    public String toString() {
+        return "SubFactor{" +
+                "id=" + id +
+                ", price=" + price +
+                ", count=" + count +
+                ", totalPrice=" + totalPrice +
+                ", profit=" + profit +
+                ", product=" + product +
+                '}';
+    }
 }

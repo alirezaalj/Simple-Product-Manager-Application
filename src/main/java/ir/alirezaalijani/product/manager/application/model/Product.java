@@ -30,4 +30,18 @@ public class Product {
     private int existCount;
     @Column(nullable = false)
     private int buyCount;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", buyPrice=" + buyPrice +
+                ", sellPrice=" + sellPrice +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", createAt=" + createAt +
+                ", existCount=" + existCount +
+                ", buyCount=" + buyCount +
+                '}';
+    }
 }
